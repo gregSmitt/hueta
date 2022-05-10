@@ -1,0 +1,12 @@
+nav{
+	grid-area: nav;
+	background-color: #FFBD9C;
+}
+.item {
+	cursor: pointer;
+	color:aliceblue;
+}
+
+.item a.active{
+	margin-left: 30px;
+}

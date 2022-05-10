@@ -1,0 +1,16 @@
+.friends{
+	position: relative;
+	padding: 20px 20px 0px 0px;
+	width:20%;
+	&:after{
+		content: "";
+		background-color: grey;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 1px;
+	}
+}
+
+

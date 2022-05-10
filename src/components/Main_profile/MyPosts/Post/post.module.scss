@@ -1,0 +1,26 @@
+.post{
+	display: flex;
+	margin-bottom: 10px;
+	width: 80%;
+	position: relative;
+}
+
+.avatar {
+	height: 75px;
+	position: relative;
+	border-radius: 37.5px;
+	overflow: hidden;
+	margin-right: 20px;
+}
+
+.avatar img{
+	height: 75px;
+}
+.text{
+	padding-top: 5px;
+}
+.like{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
