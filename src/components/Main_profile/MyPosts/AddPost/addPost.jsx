@@ -1,19 +1,39 @@
 import c from './addPost.module.scss';
 
 const AddPost = (props) => {
+    // let loadCash = () => {
+    //     alert('rerendered');
+    //     props.newPostElement.current.value = props.inputCash;
+    // };
 
-	// let newPostElement = React.createRef();
+    // loadCash();
 
-	let addPost = () => {
-		let text = props.newPostElement.current.value;
-		alert(text);
-	}
+    let addCash = () => {
+        let text = props.newPostElement.current.value;
+        props.addPostCash(text);
+        // props.addPost(text);
+        // props.newPostElement.current.value = '';
+    };
 
-	return (
-		<div className={c.add}>
-			{/* <h3>Write some bullshit</h3> */}
-			<input type="text" placeholder="Въебиче-нить" className={c.input} ref={props.newPostElement} onBlur={addPost} />
-		</div>
-	);
-}
+    let addPost = () => {
+        // let text = props.newPostElement.current.value;
+        props.addPost();
+        props.newPostElement.current.value = '';
+    };
+
+    return (
+        <div className={c.add}>
+            <input
+                type="text"
+                value={props.inputCash}
+                placeholder="Въебиче-нить"
+                className={c.input}
+                ref={props.newPostElement}
+                onChange={addCash}
+                // onBlur={addPost}
+            />
+            <button onClick={addPost}>add</button>
+        </div>
+    );
+};
 export default AddPost;

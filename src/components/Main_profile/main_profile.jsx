@@ -4,16 +4,18 @@ import MyPosts from './MyPosts/myPosts.jsx';
 import c from './main_profile.module.scss';
 
 const Main_profile = (props) => {
-	console.log(props.postsData);
-
-	return (
-		<div className="main">
-			<Top_image />
-			<Profile />
-			<MyPosts profilePage={props.profilePage} />
-		</div>
-	);
-}
-
+    return (
+        <div className="main">
+            <Top_image />
+            <Profile />
+            <MyPosts
+                profilePage={props.profilePage}
+                addPost={props.addPost}
+                addPostCash={props.addPostCash}
+                inputCash={props.inputCash}
+            />
+        </div>
+    );
+};
 
 export default Main_profile;
